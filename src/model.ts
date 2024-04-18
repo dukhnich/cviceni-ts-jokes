@@ -5,13 +5,3 @@ export interface Joke {
   setup: string;
   punchline: string;
 }
-
-export interface JokeWithId extends Joke {
-    id: number;
-}
-
-export interface FormData {
-  name: string;
-  type: JokeTypes;
-  count: number;
-}

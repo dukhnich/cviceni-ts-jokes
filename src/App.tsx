@@ -1,10 +1,14 @@
 import { useState } from "react";
 import "./App.scss";
-import { Form } from "./components/Form";
+import { Form, FormData } from "./components/Form";
 import { JokeEl } from "./components/JokeEl";
 import { ArrowUturnLeftIcon } from "@heroicons/react/24/outline";
 // import sourceOfJokes from "./source/jokes-data";
-import { JokeWithId, JokeTypes, FormData } from "./model";
+import { Joke, JokeTypes } from "./model";
+
+export interface JokeWithId extends Joke {
+  id: number;
+}
 
 function App() {
   const [userName, setUserName] = useState<string>('');

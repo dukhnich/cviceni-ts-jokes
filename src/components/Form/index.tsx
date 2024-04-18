@@ -1,7 +1,13 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import "./style.scss";
-import { JokeTypes, FormData } from "../../model";
+import { JokeTypes } from "../../model";
+
+export interface FormData {
+  name: string;
+  type: JokeTypes;
+  count: number;
+}
 
 const TYPES: JokeTypes[] = ["general", "dad", "knock-knock", "programming"];
 
